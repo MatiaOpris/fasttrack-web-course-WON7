@@ -11,16 +11,16 @@ var myFunction = function (a, b) {
 // Return true if the two values are equal and of the same type
 // Comparison operators, strict equality
 var myFunction2 = function (a, b) {
-  if (typeof a === typeof b) {
-    return true;
-  }
+  return a === b;
 };
+console.log(myFunction2(5, 5));
 
 //3. Write a function that takes a value as argument
 // Return the type of the value
 var myFunction3 = function (a) {
   return typeof a;
 };
+console.log(myFunction3(7));
 
 //4. write a function that takes as argument a number,
 // a string, and an object
