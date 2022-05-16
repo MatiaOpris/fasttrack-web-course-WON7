@@ -4,14 +4,18 @@
 var myFunction = function (a, b) {
   let sum = a + b;
   return sum;
-  // sau return a + b;
+    // return a + b;
 };
+console.log(myFunction(2, 5));
 
 //2. Write a function that takes two values, say a and b, as arguments
 // Return true if the two values are equal and of the same type
 // Comparison operators, strict equality
 var myFunction2 = function (a, b) {
-  return a === b;
+  if (a === b) {
+    return true;
+  }
+
 };
 console.log(myFunction2(5, 5));
 
@@ -26,7 +30,11 @@ console.log(myFunction3(7));
 // a string, and an object
 // display the values of the primitives (excluding the object)
 var myFunction4 = function (a) {
-  return;
+  if (typeof a === "string" || typeof a === "number") {
+    return a;
+  } else {
+    return " ";
+  }
 };
 
 //5. write a Student class that has a constructor with
@@ -40,8 +48,6 @@ class Student {
   }
   greeting() {
     console.log(`Hello my name is ${this.name} and I'm ${this.age}`);
-
-    // console.log(this.name);
   }
 }
 
